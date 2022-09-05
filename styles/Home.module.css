@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   font-family: 'DM Sans', sans-serif;
+  background-color: white;
 }
 
 .main h1 {
@@ -89,8 +90,31 @@
 }
 
 @media only screen and (max-width: 720px) {
+  .main {
+    margin-top: 80px;
+  }
+
   .content {
     padding: 50px 40px;
     margin: 0px 20px;
+  }
+
+  .content form button{
+    margin-top: 15px;
+  }
+
+  .btn{
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .main {
+    margin-top: 160px;
+  }
+
+  .content {
+    padding: 25px 20px;
+    margin: 0px 10px;
   }
 }
