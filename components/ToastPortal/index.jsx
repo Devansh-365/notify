@@ -44,4 +44,6 @@ const ToastPortal = forwardRef(({autoClose = false, autoCloseTime = 4000}, ref) 
   )
 })
 
+ToastPortal.displayName = 'ToastPortal'
+
 export default ToastPortal
