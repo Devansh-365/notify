@@ -98,6 +98,9 @@ Install NodeJS LTS
 ## Demonstration
 
 ![product-screenshot]
+|      screenshot 2       |       screenshot 3       |
+| :---------------------: | :----------------------: |
+| ![product-screenshotii] | ![product-screenshotiii] |
 
 
 
@@ -158,7 +161,7 @@ notification-system
 
 Your Name - devanshtiwari365@gmail.com
 
-Project Link: [https://github.com/Devansh-365/realEstate-project](https://github.com/Devansh-365/realEstate-project)
+Project Link: [https://github.com/Devansh-365/notify](https://github.com/Devansh-365/notify)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
