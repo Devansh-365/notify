@@ -66,12 +66,26 @@
   cursor: pointer;
   color: white;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   box-shadow: 0px 0px 3px #402d21;
   background: linear-gradient(180deg, #9E96F2 0%, #EC31F0 100%);
   box-shadow: 0px 3px 12px rgba(74, 58, 255, 0.18);
   border-radius: 56px;
   font-family: 'DM Sans', sans-serif;
+}
+
+.btn {
+  margin-top: 20px;
+  background: linear-gradient(180deg, #9E96F2 0%, #EC31F0 100%);
+  box-shadow: 0px 3px 12px rgba(74, 58, 255, 0.18);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
+  padding: 10px 20px ;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 56px;
 }
 
 @media only screen and (max-width: 720px) {

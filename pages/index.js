@@ -1,13 +1,19 @@
 import Head from 'next/head'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import ToastPortal from '../components/ToastPortal'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
 
+  const toastRef = useRef()
   const [textTitle, setTextTitle] = useState('')
   const [textSubtitle, setTextSubtitle] = useState('')
   const [mode, setMode] = useState('info')
   const [autoClose, setAutoClose] = useState(false)
+
+  const addToast = () => {
+    toastRef.current.addToasts({ mode:mode, title: textTitle, subTitle: textSubtitle})
+  }
 
   return (
     <div>
@@ -21,7 +27,12 @@ export default function Home() {
         <h1>Notification System</h1>
         <div className={styles.content}>
           <form 
-          onSubmit={e => {e.preventDefault()
+            onSubmit={e => {e.preventDefault()
+            if(textTitle && textSubtitle) {
+              addToast()
+              setTextTitle('')
+              setTextSubtitle('')
+            }
           }}>
             <div className={styles.autoClose}>
               <input type="checkbox"
@@ -55,6 +66,14 @@ export default function Home() {
             <button>Submit</button>
           </form>
         </div>
+
+        <h5>OR</h5>
+
+        <button onClick={() => {
+          toastRef.current.addToasts({ mode:'info', title: 'This is a random title', subTitle: 'This is random subtitle'})
+        }} className={styles.btn}>Genrate random toast</button>
+
+        <ToastPortal ref={toastRef} autoClose={autoClose} />
       </main>
 
     </div>
