@@ -29,7 +29,8 @@ const ToastPortal = forwardRef(({autoClose = false, autoCloseTime = 4000}, ref) 
     }
   }))
 
-  return loaded ? ReactDOM.createPortal(
+  return loaded ? (
+  ReactDOM.createPortal(
   <div className={styles.toastContainer}>{toasts.map((toast) => (
     <Toast 
     key={toast.id} 
@@ -38,7 +39,9 @@ const ToastPortal = forwardRef(({autoClose = false, autoCloseTime = 4000}, ref) 
     title={toast.title}
     subTitle={toast.subTitle} />
   ))}</div>,
-  document.getElementById(portalId)) : <></>
+  document.getElementById(portalId))) : (
+  <></>
+  )
 })
 
 export default ToastPortal
