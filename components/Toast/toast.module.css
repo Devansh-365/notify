@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "RubikMedium";
+    src: local("RubikMedium"), url(../../public/fonts/Rubik-Medium.ttf) format("truetype");
+}
+  
+@font-face {
+    font-family: "RubikRegular";
+    src: local("RubikRegular"), url(../../public/fonts/Rubik-Regular.ttf) format("truetype");
+}
+
+.toast {
+    width: 350px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 2px rgb(69, 69, 69);
+  
+    transition: 0.2s;
+    animation: fadeIn 0.75s;
+}
+.toast:hover {
+    transition: 0.2s;
+    transform: scale(0.95);
+    box-shadow: 0px 0px 3px gray;
+}
+
+.toast > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toast > div > div:nth-child(1) {
+    margin-right: 1rem;
+}
+
+.toast > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: center;
+    margin-right: auto;
+
+}
+
+.toast_icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-image: url(../../public/images/alertCircle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 1rem;
+}
+
+.error_toast_icon {
+    background-color: red;
+}
+  
+.info_toast_icon {
+    background-color: #2b89e9;
+}
+  
+.success_toast_icon {
+    background-color: #4cd16d;
+}
+  
+.warning_toast_icon {
+    background-color: #ffbc22;
+}
+
+.toast_title{
+    font-family: "RubikMedium";
+    font-size: 15px;
+    font-weight: 500;
+    color: #2e384d;
+    margin: 0 0 0.5rem 0;
+    margin-right: auto;
+}
+
+.toast_subTitle{
+    font-family: "RubikRegular";
+    font-size: 15px;
+    color: #2e384dce;
+    margin: 0;
+}
+
+
+.success {
+    border-left: 4px solid #4cd16d;
+}
+
+.warning {
+    border-left: 4px solid #ffbc22;
+}
+
+.error {
+    border-left: 4px solid red;
+}
+
+.info {
+    border-left: 4px solid #2b89e9;
+}
+
+#close_icon {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+  
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
