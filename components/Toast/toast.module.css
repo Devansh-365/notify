@@ -20,6 +20,7 @@
     border-radius: 5px;
     box-sizing: border-box;
     box-shadow: 0px 0px 2px rgb(69, 69, 69);
+    background-color: white;
   
     transition: 0.2s;
     animation: fadeIn 0.75s;
@@ -90,6 +91,7 @@
     font-size: 15px;
     color: #2e384dce;
     margin: 0;
+    margin-right: auto;
 }
 
 
