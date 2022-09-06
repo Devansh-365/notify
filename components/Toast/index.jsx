@@ -8,7 +8,6 @@ const Toast = ({mode, onClose, title, subTitle}) => {
 
   const classesIcon = [styles.toast_icon, styles[`${mode}_toast_icon`]].join(' ')
 
-  console.log(`styles.${mode}_toast_icon`)
 
   return (
     <div onClick={onClose} className={classes} >
