@@ -113,11 +113,11 @@
 
 @keyframes toastIt {
     from {
-      transform: translateY(-150%);
+      transform: translateX(150%);
       opacity: 0;
     }
     to {
-      transform: translateY(0);
+      transform: translateX(0);
       opacity: 1;
     }
   }
